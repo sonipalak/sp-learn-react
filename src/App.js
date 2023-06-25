@@ -1,10 +1,13 @@
 import './App.scss';
-import About from './components/About';
+import Contact from './components/Contact';
+// import About from './components/About';
+
 
 function App() {
   return (
     <div className="App">
-      <About title="This is the About Page" />
+      {/* <About title="This is the About Page" /> */}
+      <Contact />
     </div>
   );
 }
