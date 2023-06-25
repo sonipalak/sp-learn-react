@@ -7,13 +7,11 @@ function Textarea(props) {
     const [characterCount, setcharacterCount] = useState(0);
 
     const heandleUpClick = () => {
-        console.log("Update on Click" + text);
         let newText = text.toUpperCase();
         setText(newText)
     }
 
     const heandleonChange = (event) => {
-        console.log("Update On Change");
         setText(event.target.value);
         setcharacterCount(event.target.value.length);
     }
