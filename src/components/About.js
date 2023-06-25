@@ -1,5 +1,6 @@
 import React from "react";
 import Input from './from/Input';
+import Textarea from "./from/Textarea";
 
 function About(props) {
     return (
@@ -11,6 +12,7 @@ function About(props) {
                 <Input label="Last Name" type="text" placeholder="Enter Last Name" />
                 <Input label="Email" type="email" placeholder="Enter Email" />
                 <Input label="Phone" type="phone" placeholder="Enter Phone" />
+                <Textarea label="Comment" rows="5" />
             </div>
         </div>
     );
