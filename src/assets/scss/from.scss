@@ -1,0 +1,37 @@
+.form-field{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    &__label{
+        font-family: 'Manrope', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #212121;
+        display: flex;
+    }
+    &__input-wrap{
+        input{
+            width: 100%;
+            padding: 10px;
+            border: #cecece solid 1px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            font-family: 'Manrope', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+    &__textarea-wrap{
+        textarea{
+            width: 100%;
+            padding: 10px;
+            border: #cecece solid 1px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            font-family: 'Manrope', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            resize: none;
+        }
+    }
+}
