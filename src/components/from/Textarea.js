@@ -15,6 +15,14 @@ function Textarea(props) {
         //console.log("Update On Change");
         setText(event.target.value);
     }
+    const heandleLoClick = () => {
+        let newText  = text.toLowerCase();
+        setText(newText);
+    }
+    const heandleClear = () => {
+        let newText = '';
+        setText(newText);
+    }
 
     return (
         <div className="form-field">
@@ -23,7 +31,11 @@ function Textarea(props) {
                 <textarea id="myBox" onChange={heandleonChange} value={text} rows={props.rows} placeholder={props.placeholder} />
                 <p>Word Count: {text.split(" ").length}, Character Count: {text.length}</p>
             </div>
-            <button onClick={heandleUpClick}>Update Text</button>
+            <div className="button-list">
+                <button className="button filled" onClick={heandleUpClick}>Update Upper Case</button>
+                <button className="button filled" onClick={heandleLoClick}>Update Lower Case</button>
+                <button className="button filled" onClick={heandleClear}>Clear Text</button>
+            </div>
             <br />
             <p>{text}</p>
         </div>
