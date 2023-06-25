@@ -2,7 +2,7 @@ import React from "react";
 import Input from './from/Input';
 import Textarea from "./from/Textarea";
 
-function About(props) {
+export default function About(props) {
     return (
         <div className="App">
             <h1 className="title is-1">{props.title}</h1>
@@ -18,4 +18,4 @@ function About(props) {
     );
 }
 
-export default About;
+
