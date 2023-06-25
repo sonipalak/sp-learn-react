@@ -1,4 +1,3 @@
-import './App.scss';
 import Contact from './components/Contact';
 // import About from './components/About';
 
