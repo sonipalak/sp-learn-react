@@ -34,7 +34,7 @@ function App() {
     <div className="App">
       <Navigation mode={mode} toggleMode={toggleMode} />
       <Notification alert={alert}/>
-      <About title="This is the About Page" mode={mode} />
+      <About showAlert={showAlert} title="This is the About Page" mode={mode} />
       {/* <Contact /> */}
     </div>
   );

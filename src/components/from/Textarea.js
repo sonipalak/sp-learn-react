@@ -5,23 +5,27 @@ function Textarea(props) {
 
     const [text, setText] = useState(``);
 
-    const heandleUpClick = () => {
-        //console.log("Update on Click" + text);
-        let newText = text.toUpperCase();
-        setText(newText)
-    }
-
     const heandleonChange = (event) => {
         //console.log("Update On Change");
         setText(event.target.value);
     }
+
+    const heandleUpClick = () => {
+        //console.log("Update on Click" + text);
+        let newText = text.toUpperCase();
+        setText(newText);
+        props.showAlert("Converted to Uppercase!", "success");
+    }
+
     const heandleLoClick = () => {
         let newText  = text.toLowerCase();
         setText(newText);
+        props.showAlert("Converted to Loercase!", "success");
     }
     const heandleClear = () => {
         let newText = '';
         setText(newText);
+        props.showAlert("Clear Text", "success");
     }
 
     return (

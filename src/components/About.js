@@ -12,7 +12,7 @@ function About(props) {
                 <Input label="Last Name" type="text" placeholder="Enter Last Name" />
                 <Input label="Email" type="email" placeholder="Enter Email" />
                 <Input label="Phone" type="phone" placeholder="Enter Phone" />
-                <Textarea label="Comment" rows="5" />
+                <Textarea showAlert={props.showAlert}  label="Comment" rows="5" />
             </div>
         </div>
     );
