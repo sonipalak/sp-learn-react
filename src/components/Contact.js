@@ -6,8 +6,7 @@ export default function Contact() {
     const [setMode, setChangeMode] = useState({
         color: 'black',
         backgroundColor: 'white',
-        borderColor: 'white',
-        height: '100vh'
+        borderColor: 'white'
     })
     const [btnText, setBtnText] = useState("Enable Light Mode")
 
@@ -16,8 +15,7 @@ export default function Contact() {
             setChangeMode({
                 color: 'black',
                 backgroundColor: 'white',
-                borderColor: 'black',
-                height: '100vh'
+                borderColor: 'black'
             })
             setBtnText("Enable Dark Mode")
         }
@@ -25,8 +23,7 @@ export default function Contact() {
             setChangeMode({
                 color: 'white',
                 backgroundColor: 'black',
-                borderColor: 'white',
-                height: '100vh'
+                borderColor: 'white'
             })
             setBtnText("Enable Light Mode")
         }
