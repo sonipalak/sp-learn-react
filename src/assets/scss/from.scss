@@ -57,3 +57,32 @@
         }
     }
 }
+
+
+.text-light{
+    .form-field{
+        &__label{
+            color: #ffffff;
+        }
+        &__input-wrap{
+            input{
+                background-color: $gray-800;
+                border-color: $gray-400;
+                &:focus{
+                    border-color: $gray-200;
+                    box-shadow: 0 0 0 4px $gray-700;
+                }
+            }
+        }
+        &__textarea-wrap{
+            textarea{
+                background-color: $gray-800;
+                border-color: $gray-400;
+                &:focus{
+                    border-color: $gray-200;
+                    box-shadow: 0 0 0 4px $gray-700;
+                }
+            }
+        }
+    }
+}

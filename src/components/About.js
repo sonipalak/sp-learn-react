@@ -4,7 +4,7 @@ import Textarea from "./from/Textarea";
 
 export default function About(props) {
     return (
-        <div className="App">
+        <div className={`App text-${props.mode === 'light'?'dark':'light'}`}>
             <h1 className="title is-1">{props.title}</h1>
             <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis consequat nulla ac ex consequat, in efficitur arcu congue. Nam fermentum commodo egestas.</p>
             <div className="form-sample">
