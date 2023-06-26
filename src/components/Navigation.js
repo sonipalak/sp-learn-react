@@ -1,13 +1,13 @@
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
+import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import PropsType from 'prop-types';
 
-function Navigation() {
+function Navigation(props) {
     return (
-        <Navbar expand="lg" className="bg-body-tertiary"  bg="dark" data-bs-theme="dark">
+        <Navbar expand="lg" className="bg-body-tertiary"  bg={`${props.mode}`} data-bs-theme={`${props.mode}`}>
             <Container fluid>
                 <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
@@ -33,14 +33,13 @@ function Navigation() {
                             Link
                         </Nav.Link>
                     </Nav>
-                    <Form className="d-flex">
-                        <Form.Control
-                            type="search"
-                            placeholder="Search"
-                            className="me-2"
-                            aria-label="Search"
-                        />
-                        <Button variant="outline-success">Search</Button>
+                    <Form className={`d-flex text-${props.mode === 'light'?'dark':'light'}`}>
+                    <Form.Check 
+                        type="switch"
+                        id="custom-switch"
+                        label="Check this switch"
+                        onClick={props.toggleMode}
+                    />
                     </Form>
                 </Navbar.Collapse>
             </Container>
