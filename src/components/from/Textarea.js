@@ -5,23 +5,27 @@ function Textarea(props) {
 
     const [text, setText] = useState(``);
 
-    const heandleUpClick = () => {
-        //console.log("Update on Click" + text);
-        let newText = text.toUpperCase();
-        setText(newText)
-    }
-
     const heandleonChange = (event) => {
         //console.log("Update On Change");
         setText(event.target.value);
     }
+
+    const heandleUpClick = () => {
+        //console.log("Update on Click" + text);
+        let newText = text.toUpperCase();
+        setText(newText);
+        props.showAlert("Converted to Uppercase!", "success");
+    }
+
     const heandleLoClick = () => {
         let newText  = text.toLowerCase();
         setText(newText);
+        props.showAlert("Converted to Loercase!", "success");
     }
     const heandleClear = () => {
         let newText = '';
         setText(newText);
+        props.showAlert("Clear Text", "success");
     }
 
     return (
@@ -29,7 +33,7 @@ function Textarea(props) {
             <label className='form-field__label'>{props.label}</label>
             <div className='form-field__textarea-wrap'>
                 <textarea id="myBox" onChange={heandleonChange} value={text} rows={props.rows} placeholder={props.placeholder} />
-                <p>Word Count: {text.split(" ").length}, Character Count: {text.length}</p>
+                <p>Word Count: {text.trim() === '' ? 0 : text.match(/\S+/g).length}, Character Count: {text.length}</p>
             </div>
             <div className="button-list">
                 <button className="button filled" onClick={heandleUpClick}>Update Upper Case</button>
