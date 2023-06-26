@@ -37,7 +37,7 @@ function Textarea(props) {
                 <button className="button filled" onClick={heandleClear}>Clear Text</button>
             </div>
             <br />
-            <p>{text}</p>
+            <p>{text.length>0?text:"Enter something in the textbox above to preview it here." }</p>
         </div>
     )
 }
