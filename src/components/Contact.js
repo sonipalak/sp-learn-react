@@ -4,8 +4,8 @@ import '../assets/scss/custom/button.scss';
 export default function Contact() {
 
     const [setMode, setChangeMode] = useState({
-        color: 'white',
-        backgroundColor: 'black',
+        color: 'black',
+        backgroundColor: 'white',
         borderColor: 'white',
         height: '100vh'
     })
