@@ -33,7 +33,7 @@ function Textarea(props) {
             <label className='form-field__label'>{props.label}</label>
             <div className='form-field__textarea-wrap'>
                 <textarea id="myBox" onChange={heandleonChange} value={text} rows={props.rows} placeholder={props.placeholder} />
-                <p>Word Count: {text.split(" ").length}, Character Count: {text.length}</p>
+                <p>Word Count: {text.trim() === '' ? 0 : text.match(/\S+/g).length}, Character Count: {text.length}</p>
             </div>
             <div className="button-list">
                 <button className="button filled" onClick={heandleUpClick}>Update Upper Case</button>
