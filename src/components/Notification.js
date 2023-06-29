@@ -6,9 +6,11 @@ function Notification(props) {
     return lower.charAt(0).toUpperCase() + lower.slice(1); 
   }
   return (
-    props.alert && <Alert variant={`${props.alert.type}`}>
+    <div className='alert-height'>
+      {props.alert && <Alert variant={`${props.alert.type}`}>
       <strong>{capitalize(props.alert.type)}</strong>: {props.alert.msg}
-    </Alert>
+    </Alert>}
+    </div>
   );
 }
 

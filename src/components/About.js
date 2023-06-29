@@ -21,10 +21,10 @@ export default function About(props) {
                 <Row className="justify-content-md-center">
                     <Col md={6} xs={12}>
                         <div className="form-sample">
-                            <Input label="First Name" type="text" placeholder="Enter First Name" />
+                            {/*<Input label="First Name" type="text" placeholder="Enter First Name" />
                             <Input label="Last Name" type="text" placeholder="Enter Last Name" />
                             <Input label="Email" type="email" placeholder="Enter Email" />
-                            <Input label="Phone" type="phone" placeholder="Enter Phone" />
+                            <Input label="Phone" type="phone" placeholder="Enter Phone" /> */}
                             <Textarea showAlert={props.showAlert} label="Comment" rows="5" />
                         </div>
                     </Col>
