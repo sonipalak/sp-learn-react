@@ -33,12 +33,13 @@ function Textarea(props) {
             <label className='form-field__label'>{props.label}</label>
             <div className='form-field__textarea-wrap'>
                 <textarea id="myBox" onChange={heandleonChange} value={text} rows={props.rows} placeholder={props.placeholder} />
-                <p>Word Count: {text.trim() === '' ? 0 : text.match(/\S+/g).length}, Character Count: {text.length}</p>
+                {/* <p>Word Count: {text.trim() === '' ? 0 : text.match(/\S+/g).length}, Character Count: {text.length}</p> */}
+                <p>Word Count: {text.split(" ").filter((element)=>{return element.length!==0}).length}, Character Count: {text.length}</p>
             </div>
             <div className="button-list">
-                <button className="button filled" onClick={heandleUpClick}>Update Upper Case</button>
-                <button className="button filled" onClick={heandleLoClick}>Update Lower Case</button>
-                <button className="button filled" onClick={heandleClear}>Clear Text</button>
+                <button disabled={text.length===0} className="button filled" onClick={heandleUpClick}>Update Upper Case</button>
+                <button disabled={text.length===0} className="button filled" onClick={heandleLoClick}>Update Lower Case</button>
+                <button disabled={text.length===0} className="button filled" onClick={heandleClear}>Clear Text</button>
             </div>
             <br />
             <p>{text.length>0?text:"Enter something in the textbox above to preview it here." }</p>
