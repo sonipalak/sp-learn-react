@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-function About(props) {
+export default function About(props) {
     return (
         <div className={`App text-${props.mode === 'light' ? 'dark' : 'light'}`}>
             <Container>
@@ -34,4 +34,4 @@ function About(props) {
     );
 }
 
-export default About;
+
